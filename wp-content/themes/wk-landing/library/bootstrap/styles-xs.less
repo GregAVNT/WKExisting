@@ -10,7 +10,7 @@ body {
 	color: @black;
 }
 .container {
-background: #fff;
+	background: #fff;
 }
 
 .row{
@@ -74,15 +74,28 @@ h4{
 	height:50px;
 	width:50px;
 	float:right;
+	
+	-webkit-transition:all .1s ease-in-out;
+	-moz-transition:all .1s ease-in-out;
+	transition:all .1s ease-in-out;
 }
 .wk-twitter{
 background: url('../img/icon-twitter.png');
 }
+.wk-twitter:hover{
+	background: url('../img/icon-twitter-over.png');
+}
 .wk-facebook{
 background: url('../img/icon-facebook.png');
 }
+.wk-facebook:hover{
+background: url('../img/icon-facebook-over.png');
+}
 .wk-youtube{
 background: url('../img/icon-youtube.png');
+}
+.wk-youtube:hover{
+background: url('../img/icon-youtube-over.png');
 }
 .hero{
 	background:url(../img/wkmain_img_1.jpg)center center no-repeat;
@@ -99,16 +112,17 @@ background: url('../img/icon-youtube.png');
 
 .video{
 	background: rgba(0,0,0,.5);
-	padding:15px;
+	padding:25px;
 }
 .page-title{
 	font-family:@open-sans;
 	font-weight:300;
-	font-size:24px;
+	font-size:28px;
 	color:@dark-blue;
 	background:rgba(255,255,255,.60);
 	vertical-align: bottom;
 	margin-bottom:0px;
+	padding:25px;
 }
 .main-attraction{
 	margin:0px;
@@ -128,8 +142,9 @@ background: url('../img/icon-youtube.png');
 .wk-book-img img{
 	height:auto !important;
 	width:100% !important;
-	border:5px solid #fff;
+	border:10px solid #fff;
 	outline:2px solid @light-gray;
+	max-width:180px;
 }
  h2.featured-book-title{
 	font-family: @open-sans;
@@ -139,6 +154,7 @@ background: url('../img/icon-youtube.png');
 	padding-left:0;
 	padding-bottom:10px;
 	line-height:1.2em;
+	font-size:18px !important;
 }
 .wk-price{
 	font-family: @open-sans;
@@ -258,6 +274,7 @@ span.panel-logic{
 .wk-tabs li a{
 	font-family:@open-sans;
 	color:@darkblue;
+	font-size:12px;
 }
 .wk-tabs li.active a{
 	color:@md-blue;
@@ -281,6 +298,9 @@ span.panel-logic{
 
 /********Subscribe************/
 
+.subscribe-top{
+	display:none;
+	}
 .subscribe{
 	background:#9acd6e;
 	min-height:200px;
@@ -356,13 +376,18 @@ span.panel-logic{
 }
 .book-row{
 	min-height:200px;
-	padding:0px 0px;
+	padding:20px 0px;
 	border-bottom:1px solid #d6d6d6;
 	border-right:1px solid #d6d6d6;
 }
 
 .related-book{
 	width:100%;
+	margin:0;
+	padding:20px 0;
+}
+.related-book .row{
+	margin:0;
 }
 
 .book-cover img{

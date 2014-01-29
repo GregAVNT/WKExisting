@@ -60,7 +60,7 @@
 					
 					<section class="book-module row border-bottom" id=""> 
 					<!--begin book module-->
-						<div class='col-xs-4 wk-book-img'>
+						<div class='col-xs-4 book-cover wk-book-img'>
 							<?php echo wp_get_attachment_image(get_meta('book_image_id', true), 'book-main'); ?> 
 						</div>
 						<div class='col-xs-8 wk-tab-sub'>
@@ -128,7 +128,7 @@
 						if($related_books) : foreach($related_books as $bookID => $book) { 
 						if($book['subsection'] != '') continue; 
 						if($bookNum % 2 === 1) { 
-							echo '<div class="book-row col-md-6 clearfix">'; 
+							echo '<div class="book-row row clearfix">'; 
 						} 
 						print_book($book); 
 							if($bookNum % 2 === 1) { 
@@ -146,7 +146,7 @@
 							
 							foreach($related_books as $bookID => $book) { 
 								if($book['subsection'] != ($sub_num+1)) continue; if($bookNum % 2 === 1) { 
-									echo '<div class="book-row col-md-6 clearfix">';
+									echo '<div class="book-row row clearfix">';
 								} print_book($book); 
 								if($bookNum % 2 === 1) { 
 									echo '</div>'; 

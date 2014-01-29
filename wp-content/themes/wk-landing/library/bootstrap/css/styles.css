@@ -112,15 +112,27 @@ h4 {
   height: 50px;
   width: 50px;
   float: right;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .wk-twitter {
   background: url('../img/icon-twitter.png');
 }
+.wk-twitter:hover {
+  background: url('../img/icon-twitter-over.png');
+}
 .wk-facebook {
   background: url('../img/icon-facebook.png');
 }
+.wk-facebook:hover {
+  background: url('../img/icon-facebook-over.png');
+}
 .wk-youtube {
   background: url('../img/icon-youtube.png');
+}
+.wk-youtube:hover {
+  background: url('../img/icon-youtube-over.png');
 }
 .hero {
   background: url(../img/wkmain_img_1.jpg) center center no-repeat;
@@ -135,16 +147,17 @@ h4 {
 }
 .video {
   background: rgba(0, 0, 0, 0.5);
-  padding: 15px;
+  padding: 25px;
 }
 .page-title {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 28px;
   color: #526478;
   background: rgba(255, 255, 255, 0.6);
   vertical-align: bottom;
   margin-bottom: 0px;
+  padding: 25px;
 }
 .main-attraction {
   margin: 0px;
@@ -163,8 +176,9 @@ h4 {
 .wk-book-img img {
   height: auto !important;
   width: 100% !important;
-  border: 5px solid #fff;
+  border: 10px solid #fff;
   outline: 2px solid #d6d6d6;
+  max-width: 180px;
 }
 h2.featured-book-title {
   font-family: 'Open Sans', sans-serif;
@@ -174,6 +188,7 @@ h2.featured-book-title {
   padding-left: 0;
   padding-bottom: 10px;
   line-height: 1.2em;
+  font-size: 18px !important;
 }
 .wk-price {
   font-family: 'Open Sans', sans-serif;
@@ -290,6 +305,7 @@ span.panel-logic {
 .wk-tabs li a {
   font-family: 'Open Sans', sans-serif;
   color: #526478;
+  font-size: 12px;
 }
 .wk-tabs li.active a {
   color: #0a84c9;
@@ -311,6 +327,9 @@ span.panel-logic {
   color: #4ba5d7;
 }
 /********Subscribe************/
+.subscribe-top {
+  display: none;
+}
 .subscribe {
   background: #9acd6e;
   min-height: 200px;
@@ -381,12 +400,17 @@ a {
 }
 .book-row {
   min-height: 200px;
-  padding: 0px 0px;
+  padding: 20px 0px;
   border-bottom: 1px solid #d6d6d6;
   border-right: 1px solid #d6d6d6;
 }
 .related-book {
   width: 100%;
+  margin: 0;
+  padding: 20px 0;
+}
+.related-book .row {
+  margin: 0;
 }
 .book-cover img {
   margin: 15px 0px;
@@ -414,7 +438,11 @@ a {
   .social-container {
     margin-right: 10%;
   }
+  .header {
+    padding: 40px 0px;
+  }
   .subscribe-top {
+    display: none;
     position: relative;
     top: 0px;
     left: 0px;
@@ -427,6 +455,9 @@ a {
     text-align: center;
     min-width: 540px;
     height: 100%;
+  }
+  .page-title {
+    font-size: 36px;
   }
   .subscribe-inner p {
     font-family: 'Open Sans', sans-serif;
@@ -464,15 +495,20 @@ a {
     width: 100%;
     border: 15px solid #fff;
     outline: 2px solid #d6d6d6;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
   }
 }
 /* end Small devices */
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   /********Main Content Area********/
-  .header {
-    padding: 40px 0px;
+  .page-title {
+    font-size: 42px;
+    padding: 20px 30px;
+    line-height: 45px;
+  }
+  .subscribe-top {
+    display: block;
   }
   .social-container {
     height: 50px;
@@ -509,7 +545,7 @@ a {
     height: auto;
     width: 90%;
     left: 10%;
-    border: 25px solid #fff;
+    border: 15px solid #fff;
     outline: 2px solid #d6d6d6;
   }
 }

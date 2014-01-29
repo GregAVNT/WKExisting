@@ -74,7 +74,7 @@ mark {
     color: #000;
 }
 p, pre {
-    margin: 1em 0;
+    margin: 1.2em 0;
 }
 code, kbd, pre, samp {
     font-family: monospace,  serif;
@@ -1382,7 +1382,7 @@ h5, .h5 {
     /*background-color: #e1236f;*/
     position: absolute;
     bottom: 5px;
-    right: 5px;
+    right: 15%;
     color: white;
     height: 86px;
     width: 86px;

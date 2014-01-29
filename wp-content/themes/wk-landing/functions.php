@@ -185,7 +185,7 @@ function print_book($book, $ebook = false) { ?>
 			<br /> 
 			<span class="wk-you-save">You Save: <?php echo $discount_percent; ?>% <?php } } echo '</span></p>'; } ?> 
 		<?php if($book['link']) {?> 
-			<a href="<?php echo $book['link']; ?>" target="_blank"> <div class="wk-buy-btn wk-learn-more col-sm-6">
+			<a href="<?php echo $book['link']; ?>" target="_blank"> <div class="wk-buy-btn wk-learn-more col-sm-6 col-md-3">
 			<?php echo $ebook ? 'Buy Now' : 'Learn More'; ?> 
 			</div></a> <?php } ?> 
 			</div>
