@@ -1,0 +1,88 @@
+/******************************************************************
+Site Name: WK Landing Pages
+Author: FulcrumTech, LLC
+
+Stylesheet: Admin Stylesheet
+
+******************************************************************/
+
+@import "compass/css3";
+
+.dynamic-fixed {
+	position:fixed;
+	top:37px;
+	width:278px;
+}
+
+.error ul li {
+	padding: 0;
+	margin: 0 0 0 30px;
+	list-style: disc;
+}
+
+h3.hndle em {
+	font-size: 12px;
+}
+
+.maxChars {
+	display:none;
+}
+
+.charCount {
+	float:right;
+	padding-right: 3%;
+}
+
+.charOverflow {
+	color: #F00;
+}
+
+#email_signup_module .cmb_metabox_description {
+	display: block;
+}
+
+.infinity_wrapper {
+	background:#ECECEC;
+	border:solid 1px #DFDFDF;
+	padding:10px;
+	margin-bottom:15px;
+	position:relative;
+	@include border-radius(3px);
+
+	.removeField, .removeField:hover {
+		float: right;
+		background: url("../../../../../wp-admin/images/no.png") no-repeat center center;
+		padding: 0;
+		border: 0;
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+
+	.wk-infinity-field {
+		margin-bottom: 10px;
+	}
+
+	table.cmb_metabox & {
+
+		label {
+			margin-right: 15px;
+			display: inline;
+		}
+
+		input[type=text] {
+			@include inline-block;
+			width: 75%;
+
+			&.cmb_text_small {
+				width: 100px;
+				margin-right: 15px;
+			}
+
+		}
+
+	}
+
+}

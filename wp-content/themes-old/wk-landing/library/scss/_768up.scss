@@ -1,0 +1,799 @@
+/******************************************************************
+Site Name: WK Landing Pages
+Author: FulcrumTech, LLC
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-size: 14px;
+	line-height: 1.4em;
+}
+
+#container {
+	border-top: solid 7px $wk-dark-green;
+
+	.header, #content, .footer {
+		max-width: 960px;
+	}
+
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	max-width: 1140px;
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	text-rendering: optimizelegibility;
+	font-weight: bold;
+}
+
+h1, .h1 {
+	font-size: 25px;
+}
+
+h2, .h2 {
+	font-size: 15px;
+}
+
+h3, .h3 {
+	font-size: 15px;
+	margin-bottom: 0.5em;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	padding: 20px 0 28px;
+
+	.addthis_toolbox {
+		left: auto;
+		top: auto;
+		right: -6px;
+		bottom: 18px;
+		width: 320px;
+		height: 24px;
+
+		.lt-ie9 & {
+			right: -8px;
+		}
+
+		.lt-ie8 & {
+			right: -11px;
+		}
+
+	}
+
+}
+
+#logo {
+	width: 335px;
+	float: left;
+	margin: 0;
+
+	a {
+		background-image: image-url('wk-logo.png');
+		background-size: 335px 51px;
+		width: 335px;
+		height: 51px;
+	}
+
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+// Webinar & Podcast Modules
+
+.top-module {
+	padding: 0;
+	line-height: 33px;
+	text-align: center;
+	font-size: 13px;
+
+	div {
+		@include inline-block;
+		height: 33px;
+	}
+
+	span {
+		display: inline;
+	}
+
+	i {
+		position: static;
+		margin-left: 5px;
+
+		.lt-ie8 & {
+			display: inline;
+		}
+
+	}
+
+}
+
+#hero-book-module {
+	overflow: hidden;
+	margin-bottom: 5px;
+	// IE 7 bug: http://stackoverflow.com/questions/2403011/ie6-ie7-css-problem-with-overflow-hidden-position-relative-combo
+	position: relative;
+}
+
+#hero {
+	float: left;
+	width: 70%;
+	position: relative;
+
+	// http://stackoverflow.com/questions/1205159/html-css-making-two-floating-divs-the-same-height
+	padding-bottom: 500px;
+	margin-bottom: -485px;
+
+	.logo-wrapper {
+		padding: 15px;
+		width: 138px;
+		max-width: 138px;
+	}
+
+	h1 {
+		padding-top: 17px;
+	}
+
+	#book-desc {
+		float: left;
+		width: 52%;
+		position: relative;
+		z-index: 1;
+	}
+
+	.video {
+		width: 48%;
+		float: right;
+		left: 15px;
+
+		h2 {
+			font-size: 13px;
+		}
+
+	}
+
+	#book-desc-intro {
+		position: relative;
+		z-index: 1;
+	}
+
+	#hero-image {
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 490px;
+		z-index: 0;
+
+		img {
+			margin: 0;
+			max-width: 100%;
+
+			.lt-ie9 & {
+				height: 100%;
+			}
+
+			.lt-ie8 & {
+				height: auto;
+			}
+
+		}
+
+	}
+
+}
+
+#book-module {
+	width: 29%;
+	float: right;
+	padding-bottom: 500px;
+	margin-bottom: -482px;
+
+	.csscalc & {
+		@include calc(width, "30% - 5px");
+	}
+}
+
+.big-pink-button {
+	font-size: 18px;
+
+	.ipad-portrait #book-module & {
+		text-align: left;
+		padding-left: 15px;
+	}
+
+	i {
+		top: 9px;
+		right: 10px;
+		width: 18px;
+		height: 18px;
+		font-size: 18px;
+
+		/*
+		.lt-ie8 & {
+			top: 0;
+			margin: 7px 0 0;
+			padding: 0;
+			width: 22px;
+			height: 22px;
+			background: image-url('ie7-button-arrow-bg.png') 1px 3px no-repeat;
+		}
+		*/
+
+		.lt-ie8 & {
+			@extend .image-replacement;
+			width: 20px;
+			height: 20px;
+			top: 13px;
+			background: image-url('ie7-arrow-big.png') no-repeat;
+		}
+
+	}
+
+}
+
+
+.tan-box {
+	@extend %box-sizing;
+	clear: none;
+	min-height: 65px;
+	padding: 15px 15px 15px 60px;
+
+	.lt-ie9 & {
+		min-height: 35px;
+	}
+
+}
+
+#press-release {
+	width: 36.5%;
+	float: left;
+	display:table;
+
+	.csscalc & {
+		width: 36%;
+	}
+
+	div {
+		display: table-cell;
+		vertical-align: middle;
+
+		h3 {
+			line-height: normal;
+			margin-right: 8px;
+		}
+
+	}
+
+	a {
+		line-height: 17px;
+		width: 105px;
+	}
+
+}
+
+#email-signup {
+	width: 63%;
+	@include calc(width, "64% - 5px");
+	float: right;
+	padding-bottom: 0;
+
+	h3 {
+		font-size: 14px;
+		line-height: 17px;
+		width: 38%;
+		float: left;
+	}
+
+	&.no-pr-module {
+		width: 100%;
+		float: none;
+
+		h3 {
+			font-size: 15px;
+		}
+
+		.gform_wrapper button {
+			font-size: 14px;
+		}
+
+	}
+
+	#signup-form-wrapper {
+		width: 60%;
+		float: right;
+	}
+
+	#spinner-wrapper {
+		top: 38px;
+	}
+
+	#privacy-policy {
+		width: 60%;
+		float: right;
+		margin-bottom: 5px;
+	}
+
+}
+
+.gform_wrapper {
+
+	ul {
+		margin: 0;
+	}
+
+	input, input:focus {
+		height: 26px;
+		border-width: 1px;
+	}
+
+	button {
+		font-size: 12px;
+		height: 26px;
+	}
+
+	.validation_message {
+		top: 26px;
+	}
+
+}
+
+#gforms_confirmation_message {
+	margin-top: 0;
+}
+
+#tabs {
+	clear: both;
+
+	> ul li {
+
+		a {
+			width: 165px;
+			margin: 0 2px 0 0;
+			background-image: image-url('tab-shadow.png');
+			background-repeat: repeat-x;
+			background-position: center bottom;
+
+			&:hover {
+				@extend a;
+			}
+
+			&.even {
+				float: left;
+			}
+
+		}
+
+		&:first-child a {
+			margin-left: 13px;
+		}
+
+		&.ui-state-active a {
+			background-image: image-url('tab-shadow.png');
+			background-repeat: repeat-x;
+			background-position: center bottom;
+		}
+
+	}
+
+	.mobile-header {
+		display: none;
+	}
+
+	.inner-tab {
+		position: relative;
+
+		.zoomer {
+			position: absolute;
+			top: 30px;
+			width: 32px;
+			height: 9px;
+			background: image-url('tab-arrow.png') no-repeat;
+
+			.ie9 & {
+				top: 29px;
+			}
+
+		}
+
+	}
+
+	.desktop-header {
+		display: block;
+		background: $wk-dark-green;
+		height: 31px;
+
+		li {
+			float: left;
+
+			a {
+				display: block;
+				float: left;
+				font-size: 13px;
+				color: white;
+				height: 31px;
+				position: relative;
+				zoom: 1;
+
+				.lt-ie8 & {
+					cursor: pointer;
+				}
+
+			}
+
+			span {
+				display: block;
+				height: 19px;
+				line-height: 19px;
+				padding: 0 20px;
+				margin: 4px 0 8px;
+				border-left: dotted 1px white;
+			}
+
+			&:first-child span {
+				border: 0;
+			}
+
+		}
+
+	}
+
+	#author-blogs {
+		clear: both;
+		max-width: 500px;
+		margin: 0 auto;
+
+		&.single-author {
+			width: 48%;
+			@include calc(width, '50% - 10px');
+			float: right;
+			clear: right;
+		}
+
+		ul {
+			margin-left: 30px;
+		}
+
+	}
+
+}
+
+.pane {
+	padding: 30px 35px;
+
+	h2 {
+		text-align: left;
+	}
+
+}
+
+	.author {
+		width: 48%;
+		@include calc(width, '50% - 10px');
+		float: left;
+
+		&.even {
+			float: right;
+		}
+
+		.no-descs & {
+			float: left;
+			width: auto;
+			min-width: 200px;
+
+			img {
+				margin: 0 0 10px;
+			}
+
+			h4 {
+				clear: both;
+			}
+
+			a.bio-link {
+				text-align: left;
+			}
+
+		}
+
+		&.no-desc {
+
+			h4 {
+				margin-bottom: 10px;
+			}
+
+			a.bio-link {
+				text-align: left;
+			}
+
+			.author-details {
+				clear:both;
+			}
+
+		}
+
+		.author-pic {
+			margin: 0 20px 0 0;
+			float: left;
+		}
+
+		.author-details {
+			overflow: hidden;
+		}
+
+		h4 {
+			text-align: left;
+			margin-top: 0;
+		}
+
+	}
+
+	#single-authors {
+		float: left;
+		width: 48%;
+		@include calc(width, '50% - 10px');
+
+		.author {
+			width: 100%;
+		}
+
+	}
+
+	#about-book-right {
+		@extend %box-sizing;
+		width: 30%;
+		float: right;
+	}
+
+	#about-book-left {
+		@extend %box-sizing;
+		width: 70%;
+		float: left;
+		padding-right: 60px;
+
+		h2 {
+			margin-bottom: 0.5em;
+		}
+
+	}
+
+	#book-details2 {
+		padding: 22px;
+	}
+
+	.sample {
+		float: left;
+		margin-right: 65px;
+		margin-bottom: 30px;
+
+		h3 {
+			margin-top: 0;
+		}
+
+	}
+
+	.insight-img {
+		float: left;
+	}
+
+	.insight-content {
+		float: left;
+		@include calc(width, '100% - 506px');
+		margin: 0 25px;
+
+		.ipad-portrait & {
+			@include calc(width, '100% - 435px')
+		}
+
+		h3 {
+			text-align: left;
+		}
+
+	}
+
+	.ipad-portrait .insight-word-wrapper {
+		width: 160px;
+	}
+
+	.insight-word-wrapper {
+		float: left;
+		width: 231px;
+
+		h4 {
+			margin-top: 0;
+		}
+
+	}
+
+	.related-book {
+		margin-bottom: 50px;
+		padding: 0;
+		width: 49%;
+		float: left;
+
+		&.even {
+			float: right;
+		}
+
+		.csscalc .related_products & {
+
+			.book-info {
+				@include calc(width, '100% - 143px');
+				float: right;
+			}
+
+		}
+
+		.csscalc .ebook_products & {
+
+			.book-info {
+				@include calc(width, '100% - 175px');
+				float: right;
+			}
+
+		}
+
+		h3 {
+			margin-top: 0;
+		}
+
+		h4, p {
+			font-size: 14px;
+			line-height: 21px;
+		}
+
+		.pink-button {
+			float: left;
+
+			i {
+				top:7px;
+			}
+
+		}
+
+	}
+
+	.related-subsection {
+		clear: both;
+	}
+
+		.book-cover {
+			margin: 0 15px 0 0;
+			float: left;
+		}
+
+	#ebooks-header {
+		float: left;
+		width: 52%;
+		margin-bottom: 20px;
+	}
+
+	#inkling-modules {
+		float: right;
+		width: 40%;
+	}
+
+.feedback-button {
+	margin: 10px 0;
+	padding: 8px 15px;
+	width: 240px;
+	font-size: 15px;
+	float: left;
+
+	span {
+		height: 26px;
+		line-height: 26px;
+		background-size: 35px 26px;
+
+		.lt-ie9 & {
+			height: 30px;
+			line-height: 30px;
+			background-size: 40px 30px;
+		}
+
+	}
+
+}
+
+.addthis_32x32_style {
+	margin: 22px 0 10px;
+	float: right;
+	width: 112px;
+
+	a.addthis_button_twitter_follow {
+		padding-right: 0;
+	}
+
+	&.with-linkedin {
+		width: 150px;
+
+		a.addthis_button_twitter_follow {
+			padding-right: 3px;
+		}
+
+		a.addthis_button_linkedin_follow {
+			padding-right: 0;
+		}
+
+	}
+
+}
+
+/* entry content */
+.entry-content {
+
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft {
+		margin-right: 1.5em;
+		display: inline;
+		float: left;
+	}
+	.alignright, img.alignright {
+		margin-left: 1.5em;
+		display: inline;
+		float: right;
+	}
+	.aligncenter, img.aligncenter {
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+		clear: both;
+	}
+
+} /* end .entry-content */
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	font-size: 11px;
+	line-height: 16px;
+	padding-bottom: 40px;
+
+	p {
+		margin: 11px 0;
+	}
+
+	img {
+		float: left;
+		margin: 15px 0 0;
+	}
+
+}
+
+p#cobrand-disclaimer {
+	margin: 11px 20px 0;
+	float: left;
+	width: 50%;
+}
+
+.copyright {
+	float: right;
+	text-align: right;
+}

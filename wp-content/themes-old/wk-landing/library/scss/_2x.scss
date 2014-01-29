@@ -1,0 +1,85 @@
+/******************************************************************
+Site Name: WK Landing Pages
+Author: FulcrumTech, LLC
+
+Stylesheet: Retina Screens & Devices Stylesheet
+
+When handling retina screens you need to make adjustments, especially
+if you're not using font icons. Here you can add them in one neat
+place.
+
+******************************************************************/
+
+.header, .footer {
+	background-image: image-url('divider@2x.png');
+	background-size: 310px 8px;
+}
+
+#logo a {
+	background-image: image-url('wk-logo@2x.png');
+}
+
+.addthis_32x32_style span {
+	background-size: 32px 32px;
+}
+
+.addthis_button_facebook_follow span {
+	background-image: image-url('facebook@2x.png');
+}
+
+.addthis_button_twitter_follow span {
+	background-image: image-url('twitter@2x.png');
+}
+
+.addthis_button_youtube_follow span {
+	background-image: image-url('youtube@2x.png');
+	background-size: 33px 33px;
+}
+
+.addthis_button_linkedin_follow span {
+	background-image: image-url('linkedin@2x.png');
+}
+
+#webinar-module div {
+	background-image: image-url('webinar-icon@2x.png');
+	background-size: 30px 23px;
+}
+
+#podcast-module div {
+	background-image: image-url('podcast-icon@2x.png');
+	background-size: 17px 23px;
+}
+
+#press-release {
+	background-image: image-url('pr-icon@2x.png');
+	background-size: 38px 32px;
+}
+
+#email-signup {
+	background-image: image-url('discount-icon@2x.png');
+	background-size: 36px 28px;
+}
+
+#tabs .inner-tab .zoomer {
+	background-image: image-url('tab-arrow@2x.png');
+	background-size: 32px 9px;
+}
+
+.pane .subtitle-lines span {
+	background-image: image-url('tab-subtitle-bg@2x.png');
+	background-size: 1px 7px;
+}
+
+.inkling-module h3 span {
+	background-image: image-url('inkling@2x.png');
+	background-size: 37px 15px;
+}
+
+.ebook_products .book-cover div {
+	background-image: image-url('ipad-overlay@2x.png');
+	background-size: 160px 201px;
+}
+
+.feedback-button span {
+	background-image: image-url('feedback-icon@2x.png');
+}

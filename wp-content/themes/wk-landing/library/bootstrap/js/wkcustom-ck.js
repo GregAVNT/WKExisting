@@ -1,0 +1,1 @@
+$(".panel-collapse").on("shown.bs.collapse",function(){var e=$(this).attr("id"),t="#"+e;$("div[data-target='"+t+"']").toggleClass("active")});$(".panel-collapse").on("hidden.bs.collapse",function(){var e=$(this).attr("id"),t="#"+e;$("div[data-target='"+t+"']").toggleClass("active")});
