@@ -149,6 +149,12 @@ h4 {
   background: rgba(0, 0, 0, 0.5);
   padding: 25px;
 }
+.video > p {
+  margin: 0;
+}
+.video h2 {
+  margin-top: 0;
+}
 .page-title {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -230,21 +236,6 @@ h2.featured-book-title {
   margin-bottom: 10px;
   margin-right: 15px;
 }
-.wk-buy-btn-full-pink {
-  background: url(../img/icon-arrowright.png) 90% center no-repeat #e70f64;
-  border-radius: 10px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-size: 1em;
-  position: relative;
-  color: #FFF !important;
-  min-height: 3em;
-  line-height: 2em;
-  margin-left: 0px;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  margin-right: 15px;
-}
 .wk-buy-btn::before {
   width: 50px;
   max-height: 100%;
@@ -262,6 +253,20 @@ h2.featured-book-title {
 }
 .wk-buy-ebook::before {
   content: url(../img/icon-ereader.png) center center;
+  padding: 8px;
+}
+.sample h3 {
+  font-family: 'Merriweather', serif;
+  font-weight: 100;
+  font-style: italic;
+  color: #454647 !important;
+}
+.wk-sample {
+  padding-right: 45px;
+  margin-top: 10px;
+}
+.wk-sample::before {
+  content: url(../img/icon-magnifying-glass.png) center center;
   padding: 8px;
 }
 /*********Accordion****************/
@@ -402,7 +407,7 @@ a {
   min-height: 200px;
   padding: 20px 0px;
   border-bottom: 1px solid #d6d6d6;
-  border-right: 1px solid #d6d6d6;
+  /*border-right:1px solid #d6d6d6;*/
 }
 .related-book {
   width: 100%;

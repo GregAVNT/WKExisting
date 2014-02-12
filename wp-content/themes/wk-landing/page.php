@@ -15,7 +15,9 @@
 			</a> 
 			<?php endif; ?> 
 			<?php if(metabox_enabled('podcast_module')) : ?> 
+			
 			<a href="<?php get_meta('podcast_link'); ?>" target="_blank" id="podcast-module" class="row"> 
+			
 				<div> <?php get_meta('podcast_line1'); ?> 
 				<span class="link"><?php get_meta('podcast_cta'); ?></span> 
 				<i class="icon-chevron-right"></i> 
@@ -104,6 +106,7 @@
 												<h3><?php echo $sample['name']; ?></h3> 
 												<a href="<?php echo $sample['link']; ?>" target="_blank" class="sample-preview"> 
 													<?php echo get_wk_img($sample['image']['id'], 'sample'); ?> 
+													<div class='wk-buy-btn wk-sample'>View Contents</div>
 												</a> 
 											</div> <?php }$i++; } ?> 
 									

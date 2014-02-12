@@ -1,0 +1,1 @@
+/* global _zxcvbnSettings */(function(){var e=function(){var e,t;t=document.createElement("script");t.src=_zxcvbnSettings.src;t.type="text/javascript";t.async=!0;e=document.getElementsByTagName("script")[0];return e.parentNode.insertBefore(t,e)};window.attachEvent!=null?window.attachEvent("onload",e):window.addEventListener("load",e,!1)}).call(this);
